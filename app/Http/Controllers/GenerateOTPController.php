@@ -12,7 +12,6 @@ class GenerateOTPController extends Controller
     public function sendOtp(Request $request){
        
         $cookie_name = str_replace('.', '_', $request->email);
-        // dd(Cache::forget($cookie_name));
        
         $cookie_value = sprintf("%06d", mt_rand(1, 999999));
 
